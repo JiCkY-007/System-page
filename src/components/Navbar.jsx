@@ -4,9 +4,9 @@ import Logo from "../../src/assets/Calendly.svg";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white text-gray-600 h-16 flex items-center justify-between px-0">
+    <nav className="bg-white text-gray-600 h-16 flex items-center justify-between px-0 sticky top-0">
       <img src={Logo} alt="Calendly Logo" className="h-8 ml-5" />
-      <div className="flex space-x-4 ">
+      <div className="flex space-x-4 max-md:hidden ">
         <a href="#" className="hover:underline">
           Product
         </a>

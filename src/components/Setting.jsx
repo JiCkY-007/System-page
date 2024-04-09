@@ -26,7 +26,7 @@ const Setting = () => {
     setIsDateSelected(false);
   };
   return (
-    <div className="bg-white  h-full mx-0 p-0 rounded-lg ">
+    <div className="bg-white  h-full mx-0 p-0 rounded-lg max-md: ">
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-300"></hr>
       <div className="bg-white w-full mx-0 p-0  rounded-none ">
         <h2 className="text-2xl font-semibold mb-4 w-full text-left pl-4">
@@ -34,8 +34,8 @@ const Setting = () => {
         </h2>
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-300"></hr>
-      <div className="flex flex-row ">
-        <div id="left" className="flex-1 " class="w-1/4">
+      <div className="flex flex-row max-md:flex-col max-md:items-center ">
+        <div id="left" className="flex justify-center w-1/4 max-md:w-full">
           <ul className="mt-8 space-y-4  pl-10">
             <li>
               <a
@@ -83,7 +83,7 @@ const Setting = () => {
                 Delete information from your organization
               </h3>
             </div>
-            <p className="text-gray-600 text-left pt-3 pr-3 pb-3 pl-0">
+            <p className="text-gray-600 text-left pt-3 pr-3 pb-3 pl-0 ">
               When anyone in your organization schedules an event with an
               invitee, information about the event and everyone part of it is
               saved in Calendly. If you need to delete this information from
@@ -128,12 +128,12 @@ const Setting = () => {
                 <textarea
                   id="message"
                   rows="4"
-                  className=" border-black block p-2.5 w-full text-sm text-white bg-white rounded-md border border-gray-300 dark:bg-white dark:border-gray-600 dark:text-white rounded-md"
+                  className=" border-black block p-2.5 w-full  text-sm text-white bg-white rounded-md border border-gray-300 dark:bg-white dark:border-gray-600 dark:text-white rounded-md"
                   placeholder=""
                 ></textarea>
               </div>
-              <div className="flex  pt-4 pr-4 pb-4 pl-0">
-                <button className="flex items-center justify-center w-12 h-10 border w-24 border-gray-300 rounded-full bg-red-500 text-white font-normal bg-red-500 rounded-full hover:bg-red-700  px-6 pb-2 pt-2.5  text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 shadow-primary-2 outline-none ring-0 bg-primary-600 shadow-primary-2 motion-reduce:transition-none shadow-black/30 hover-shadow-dark-strong ">
+              <div className="flex  pt-4 pr-4 pb-4 pl-0 max-md:w-full max-md:justify-center ">
+                <button className="flex items-center justify-center  h-10 border w-24 border-gray-300 rounded-full bg-red-500 text-white font-normal bg-red-500 rounded-full hover:bg-red-700  px-6 pb-2 pt-2.5  text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 shadow-primary-2 outline-none ring-0 bg-primary-600 shadow-primary-2 motion-reduce:transition-none shadow-black/30 hover-shadow-dark-strong ">
                   Delete
                 </button>
               </div>
@@ -155,7 +155,7 @@ const Setting = () => {
             </p>
             <div>
               <div className="p-2">
-                <div className="flex items-center">
+                <div className="flex w-full max-md:flex-col items-center justify-center gap-2">
                   <DatePicker
                     selected={date}
                     onChange={handleDateChange}
@@ -186,7 +186,7 @@ const Setting = () => {
             </p>
           </div>
           <section className="w-full flex items-center justify-center">
-            <div className="border rounded-md w-full mt-1 shadow-md grid grid-cols-3 place-items-center">
+            <div className="border rounded-md w-full mt-1 shadow-md grid grid-cols-3 place-items-center max-md:grid-cols-1 ">
               <div className="flex font-semibold items-center p-2 gap-2">
                 Request Date{" "}
                 <span
